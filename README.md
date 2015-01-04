@@ -44,12 +44,13 @@ Corrections welcome
 
 Please send suggestions for corrections to:
 
-ulrikp<write-the-sign>emergence|dot|dk
+ulrikp|write-the-sign|emergence|dot|dk
 
 
 Enjoy!
 
 
 Ulrik Sandborg-Petersen
+
 Last update: July 8, 2014
 
