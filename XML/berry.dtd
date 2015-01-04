@@ -1,0 +1,98 @@
+<!-- The lexicon element is the highest level element -->
+<!ELEMENT lexicon (#PCDATA|entry)* >
+
+<!-- The entry element defines one section, encompassing a single
+discussion of a group of words -->
+<!ELEMENT entry (#PCDATA|definedWords|content)* >
+<!ATTLIST entry
+          number CDATA #REQUIRED
+          heading CDATA #REQUIRED
+>
+
+<!-- definedWords is am unordered list of definedWord elements with whitespace
+between. The whitespace can be ignored.
+-->
+<!ELEMENT definedWords (#PCDATA|definedWord)* >
+
+<!-- definedWord is single tag which has, for each word being defined
+in an entry, the strong's number and the word in beta encoding and in
+Unicode Greek.
+-->
+<!ELEMENT definedWord EMPTY >
+<!ATTLIST definedWord
+          beta CDATA #REQUIRED
+          strongs CDATA #REQUIRED 
+	  greek CDATA #REQUIRED
+>
+
+
+<!-- The content element is the element containing the content of each
+entry. --> 
+<!ELEMENT content (#PCDATA|h1|h2|p)* >
+
+<!-- h1 denotes a heading at level 1. It should be centered, and with
+a larger font size than h2, as well as being font weight bold -->
+
+<!ELEMENT h1 (#PCDATA)* >
+
+<!-- h2 denotes a heading at level 2. It should be centered, and with
+a larger font size than the default document font size, but smaller
+than h1. It should be font weight normal. -->
+<!ELEMENT h2 (#PCDATA|g)* >
+
+<!-- The g element is a single-tag element which is used to encode a
+single word in Greek script. 
+
+The attribute "beta" is the Greek word in BETA encoding.
+
+The attribute "strongs" is the word's number in the Strong's encoding
+system.  It is not prefixed by G, but is simply a sequence of digits
+0-9.  If this attribute is missing, it means that there is no
+equivalent Strong's number.
+
+The attribute "head" is either true or false.  When true, it
+designates that the Greek word should stand out, e.g. in bold or with
+a color, because it is a promninent mention of a word being defined in
+the current section.
+
+The optional attribute "ref", when true, denotes that the word in
+question does not belong in this section, but can be found in another
+section of the synonyms dictionary.  When the value is "external", the
+word in question is not found in the dictionary.
+
+The optional attribute "entry" is only present if and only if
+ref==true. In that case, "entry" is the number of the entry in which
+the word belongs.
+
+-->
+<!ELEMENT g EMPTY >
+<!ATTLIST g
+          beta   CDATA #REQUIRED 
+          strongs  CDATA #IMPLIED
+          greek   CDATA #REQUIRED 
+          head   (true|false) #REQUIRED 
+          ref   (true|external) #IMPLIED 
+          entry   CDATA #IMPLIED 
+>
+
+
+<!-- The p element denotes a paragraph. Each paragraph should have its
+first line indented by about a half inch.
+ -->
+<!ELEMENT p (#PCDATA|em|g|scripRef)* >
+
+<!-- The em element designates that the contents should be in italics. -->
+<!ELEMENT em
+	  (#PCDATA)* >
+
+<!-- The scripRef element designates that the contents is a Scripture
+reference.  The reference has been decoded into an OSIS reference
+(either a single verse or a range of verses).  See the OSIS standard
+definition for how this is encoded.  It is suggested that the href
+attribute be used to put a link in the text to the Scripture
+referenced.  -->
+<!ELEMENT scripRef (#PCDATA)* >
+<!ATTLIST scripRef
+          href CDATA #REQUIRED
+>
+
