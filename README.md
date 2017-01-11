@@ -1,8 +1,6 @@
-George Ricker-Berry (1897): Synonyms
-=====================
+=George Ricker-Berry (1897): Synonyms=
 
-What is this?
--------------
+==What is this?==
 
 This is a digitalization of the Synonyms part of the following
 publication:
@@ -23,28 +21,31 @@ An annotated DTD accompanies the XML, and the XML validates against
 this DTD.
 
 
-Who is behind this digitization?
---------------------------------
+==Who is behind this digitization?==
 
 The digitization has been carried out by Ulrik Sandborg-Petersen of
-Emergence Consult, Denmark.  Email address below.  Email welcome.
+Scripture Systems ApS, Denmark.  Email address below.  Email welcome.
 
 
-What is the copyright status?
------------------------------
+==What is the copyright status?==
 
 The original is in the Public Domain.
 
 Ulrik Sandborg-Petersen hereby disclaims all copyright in the XML and
-its contents.  Public Domain.  Use for whatever purpose.
+its contents.  Public Domain.  Use for whatever purpose, commercial or
+otherwise.
 
 
-Corrections welcome
--------------------
+==Corrections welcome==
 
 Please send suggestions for corrections to:
 
-ulrikp|write-the-sign|emergence|dot|dk
+ulrikp|write-the-sign|scripturesys|dot|com
+
+Or send a pull-request via GitHub.
+
+Thank you.
+
 
 
 Enjoy!
@@ -52,5 +53,5 @@ Enjoy!
 
 Ulrik Sandborg-Petersen
 
-Last update: July 8, 2014
+Last update: January 11, 2017
 
